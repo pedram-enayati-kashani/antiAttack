@@ -1,6 +1,8 @@
 <?php 
 
 session_start();
+// session_regenerate_id(); /* every refresh make a new session id */
+session_regenerate_id(true); /* every refresh delete old session id and make a new session id */
 
 if(isset($_SESSION['active'])){
     echo '<pre>';
